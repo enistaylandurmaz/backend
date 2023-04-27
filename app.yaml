@@ -1,0 +1,23 @@
+runtime: python39
+
+env_variables:
+  #INSTANCE_HOST: 127.0.0.1
+  INSTANCE_HOST: 34.116.175.40
+  DB_PORT: 3306
+  #INSTANCE_UNIX_SOCKET: /cloudsql/eyula-etl:europe-west8:eyula-api
+  #DB_USER: root
+  #DB_PASS: root
+  DB_USER: flask
+  DB_PASS: zkmubuzroMPu>KUx
+  DB_NAME: meta_insights
+  APP_ID: 281703157065505
+  APP_SECRET: 8315ca8dac01248b47fdc8b8d6d20e88
+  #ACCESS_TOKEN: EAAEANSCb5yEBAFgM3gfRMrNzqZAnLqRUFUIuzxKu9NJmqLQRGuYM2ODbNTep9GEwMQtAxFpJw6j9BJH87MZCTlCuceI9112cnCaxWhB1gJBgpKLdxrX0MkcMipF5l6gMX1eZALtkOZBZAlOYlFpOaaoLZALs14OXpHJCxmnqVsF8d0t6PYY3OH
+handlers:
+  # This handler routes all requests not caught above to your main app. It is
+  # required when static routes are defined, but can be omitted (along with
+  # the entire handlers section) when there are no static files defined.
+- url: /.*
+  script: auto
+
+service: eyula-reporting-api
